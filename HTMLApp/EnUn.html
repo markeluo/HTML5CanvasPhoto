@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>加密解密测试</title>
+</head>
+<body>
+<div>
+   <div id="MainDiv">
+
+   </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/BaseClass.js"></script>
+<script type="text/javascript" src="js/PhotoApp.DataManager.js"></script>
+<script type="text/javascript" src="js/PhotoApp.BLL.js"></script>
+<script type="text/javascript" src="js/PhotoApp.Undata.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/PhotoApp.Base64.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+//        PhotoApp.BLL.GetEnCodeData(function(_result){
+//            if(_result.result){
+//                var DataStr=_result.Data;
+//                $("#MainDiv").append("<div>未解密字符:"+DataStr+"</div>");
+////                DataStr=uncMe(DataStr,"0123456789");
+//                DataStr=CryptoJS.DES.decrypt(DataStr,"12345678",[0xEF, 0xAB, 0x56, 0x78, 0x90, 0x34, 0xCD, 0x12]);
+//                $("#MainDiv").append("<div style='color:green;'>解密后字符:"+DataStr+"</div>");
+//            }
+//        });
+        var words  =base64encode(utf16to8("Base64加密解密测试"));
+
+        $("#MainDiv").append("<div>未解密字符:"+words+"</div>");
+
+        var base64 = utf8to16(base64decode(words));
+        $("#MainDiv").append("<div style='color:green;'>解密后字符:"+base64+"</div>");
+    });
+</script>

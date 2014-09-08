@@ -1,0 +1,4 @@
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.Model\bin\Debug\PhotoApp.Model.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.Model\bin\Debug\PhotoApp.Model.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.Model\obj\Debug\PhotoApp.Model.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.Model\obj\Debug\PhotoApp.Model.pdb

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>测试Button</title>
+    <link type="text/css" rel="stylesheet" href="blackbirdjs/blackbird.css">
+    <script type="text/javascript" src="blackbirdjs/blackbird.js"></script>
+</head>
+<body>
+<div>
+   <canvas id="myCanvas" style="border:1px solid #d3d3d3;" style="cursor: pointer"></canvas>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    //0.控制画布大小
+    canvas.width=$(document.body).width();
+    canvas.height=$(document).height()-20;
+
+    //1.绘制背景
+    var ctx= canvas.getContext("2d");
+    ctx.fillStyle = "rgba(255,255,255,1)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    //2.绘图变量
+    var OffLeft=10;
+    var OffTop=10;
+    var ImagePanelWidth=120;
+    var ImagePanelHeight=120;
+    var ImgObjList=[];//图片对象列表
+    var AblumeList=[];//相册列表
+    var img=null;
+
+    //页面加载结束,调用绘图
+    $(document).ready(function(){
+//        //图片列表
+//        var ImgNameList=["TestPhotos/10000.jpg","TestPhotos/10001.jpg","TestPhotos/10002.jpg","TestPhotos/10003.jpg","TestPhotos/10004.jpg",
+//            "TestPhotos/10005.jpg","TestPhotos/10006.jpg","TestPhotos/10007.jpg","TestPhotos/10008.jpg","TestPhotos/10009.jpg","TestPhotos/10010.jpg","TestPhotos/10011.jpg"];
+//        DrawImg(ImgNameList,0);//绘制第一张图
+
+        var _AblumeList=[];//相册列表
+        AblumeList=[];//清空相册列表
+        _AblumeList.push({TitleImg:"TestPhotos/10000.jpg",Name:"默认相册",Tols:45,Postion:{Left:0,Top:0,Right:0,Bottom:0}});
+        _AblumeList.push({TitleImg:"TestPhotos/10001.jpg",Name:"私有相册",Tols:10,Postion:{Left:0,Top:0,Right:0,Bottom:0}});
+        _AblumeList.push({TitleImg:"TestPhotos/10002.jpg",Name:"旅游",Tols:30,Postion:{Left:0,Top:0,Right:0,Bottom:0}});
+        DrawAblume(_AblumeList,0);
+
+        canvas.onclick = function(ev) {
+            var SelectedAblum=GetAblumInfo({X:ev.x,Y:ev.y},_AblumeList);
+            if(SelectedAblum!=null){
+                log.info("选中了相册："+SelectedAblum.Name);
+            }
+        }
+    });
+
+    //绘制图片
+    function DrawImg(_ImageList,_ImageIndex){
+        ImgObjList.push(new Image());
+        ImgObjList[_ImageIndex].src=_ImageList[_ImageIndex];
+        ImgObjList[_ImageIndex].name=_ImageList[_ImageIndex].substring(4,_ImageList[_ImageIndex].indexOf("."));
+        img=ImgObjList[_ImageIndex];
+        img.onload = function () {
+            ctx.fillStyle = '#c9c9c9';
+            ctx.strokeRect(OffLeft,OffTop,ImagePanelWidth,ImagePanelHeight);//绘制边框
+            ctx.clearRect(OffLeft+1,OffTop+1,ImagePanelWidth-1,ImagePanelHeight-1);//清空区域
+            ctx.drawImage(this,OffLeft+10,OffTop+10,(ImagePanelWidth-20),(ImagePanelHeight-20));
+
+            //文字显示部分
+            ctx.clearRect(OffLeft+1,OffTop+ImagePanelHeight+5,ImagePanelWidth-1,25);//清空区域
+            ctx.font = 'none 12px 微软雅黑';
+            ctx.fillStyle = '#000000';
+            ctx.fillText(this.name,OffLeft+5,OffTop+ImagePanelHeight+20);
+            OffLeft+=130;
+            if((OffLeft+130)>canvas.width){
+                OffLeft=10;
+                OffTop+=160;
+            }
+            //绘制完成一张后再绘制下一张
+            if(_ImageIndex+1<_ImageList.length){
+                DrawImg(_ImageList,_ImageIndex+1);
+            }
+        }
+    }
+
+    //绘制相册
+    function DrawAblume(_AblumeList,_Index){
+        AblumeList.push(new Image());
+        AblumeList[_Index].src=_AblumeList[_Index].TitleImg;
+        AblumeList[_Index].name=_AblumeList[_Index].Name;
+        img=AblumeList[_Index];
+        img.onload = function () {
+            ctx.fillStyle = '#c9c9c9';
+            ctx.strokeRect(OffLeft+5,OffTop+5,ImagePanelWidth,ImagePanelHeight);//绘制边框
+            ctx.strokeRect(OffLeft,OffTop,ImagePanelWidth,ImagePanelHeight);//绘制边框
+            ctx.clearRect(OffLeft+1,OffTop+1,ImagePanelWidth-1,ImagePanelHeight-1);//清空区域
+            _AblumeList[_Index].Postion.Left=OffLeft+10;
+            _AblumeList[_Index].Postion.Top=OffTop+10;
+            _AblumeList[_Index].Postion.Right=OffLeft+10+ImagePanelWidth;
+            _AblumeList[_Index].Postion.Bottom=OffTop+10+ImagePanelHeight;
+            ctx.drawImage(this,OffLeft+10,OffTop+10,(ImagePanelWidth-20),(ImagePanelHeight-20));
+
+            //文字显示部分
+            ctx.clearRect(OffLeft+1,OffTop+ImagePanelHeight+10,ImagePanelWidth-1,35);//清空区域
+            ctx.fillStyle = '#000000';
+            ctx.font = 'bold 12px 微软雅黑';
+            ctx.fillText(this.name,OffLeft+5,OffTop+ImagePanelHeight+25);
+            ctx.font = '11px 微软雅黑';
+            ctx.fillStyle = '#7e7d7d';
+            ctx.fillText(_AblumeList[_Index].Tols+" 张",OffLeft+5,OffTop+ImagePanelHeight+40);
+            OffLeft+=130;
+            if((OffLeft+130)>canvas.width){
+                OffLeft=10;
+                OffTop+=180;
+            }
+            //绘制完成一张后再绘制下一张
+            if(_Index+1<_AblumeList.length){
+                DrawAblume(_AblumeList,_Index+1);
+            }
+        }
+    }
+
+    //根据点击坐标和相册列表获取所点击相册
+    function GetAblumInfo(_offsetInfo,_AblumList){
+        var ThisAblum=null;
+        if(_AblumList!=null && _AblumList.length>0){
+            for(var i=0;i<_AblumList.length;i++){
+                if(_offsetInfo.X>=_AblumList[i].Postion.Left &&_offsetInfo.X<=_AblumList[i].Postion.Right
+                        && _offsetInfo.Y>=_AblumList[i].Postion.Top && _offsetInfo.Y<=_AblumList[i].Postion.Bottom){
+                    ThisAblum=_AblumList[i];
+                    break;
+                }
+            }
+        }
+        return ThisAblum;
+    }
+</script>

@@ -1,0 +1,14 @@
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\PhotoApp.DAL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\PhotoApp.DAL.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\PhotoApp.Model.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\PhotoApp.Model.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\obj\Debug\PhotoApp.DAL.csprojResolveAssemblyReference.cache
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\obj\Debug\PhotoApp.DAL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\obj\Debug\PhotoApp.DAL.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\ConfigFile\DbTypeConfig.xml
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\ConfigFile\LtDBSetting.xml
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\DBcreate\LtdbConfig.xml
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\DBcreate\LtScripts\Tables.sql
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\DBConfigControl.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\System.Data.SQLite.DLL
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.DAL\bin\Debug\DBConfigControl.pdb

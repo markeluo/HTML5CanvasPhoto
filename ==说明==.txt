@@ -1,0 +1,45 @@
+
+项目说明：
+
+HTML5 Canvas+ .NET WebService ，采用jquery AJAX 进行数据获取
+
+************************************************
+*
+HTMLApp:
+	
+前端展示页面,包括所有js+css+主页default.html
+	
+
+	
+设置访问WebService路径：js/PhotoApp.DataManager.js 中的WebServiceAddress变量
+
+设置
+
+WebSevice:
+        
+	
+后台WebServcie 服务：(为前端页面提供数据)
+	
+
+设置数据库存放路径地址：ConfigFile/LtDBSetting.xml
+
+	
+	
+
+照片扫描程序:用于将所选目录中所有相册文件夹及其中照片扫描成功相册和照片记录存入数据库中(采用sqlite数据库)
+
+
+
+说明：
+
+		
+
+1.由于在扫描时会生成缩略图，所以会在所选目录下创建一个名称为"miniImgtemp"的缩略图根目录。
+		
+并按照原相册文件夹创建对应的文件夹，并按照规则存放对应的缩略图。
+
+ 		
+2.生成的数据库文件存放在Data 文件夹下，后缀名为:".db3"
+
+
+

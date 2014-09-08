@@ -1,0 +1,8 @@
+﻿<DataBaseConfig>
+  <DataBases>
+    <DbInfo IsUs="1">
+      <File>Data Source=C:\inetpub\wwwroot\PhotoAppService\Data\IPSdb.db3</File>
+      <ReMarke>相册信息1</ReMarke>
+    </DbInfo>
+  </DataBases>
+</DataBaseConfig>

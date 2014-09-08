@@ -1,0 +1,13 @@
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\obj\Debug\PhotoApp.BLL.csprojResolveAssemblyReference.cache
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.BLL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.BLL.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\Db4objects.Db4o.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\Db4objects.Db4o.Linq.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.DAL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.IBLL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.Model.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.DAL.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.IBLL.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\bin\Debug\PhotoApp.Model.pdb
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\obj\Debug\PhotoApp.BLL.dll
+F:\学习资源\帮助文档与实例\HTML5+CSS3+JS\HTML5Canvas照片应用\WebService\PhotoApp.BLL\obj\Debug\PhotoApp.BLL.pdb
